@@ -5,11 +5,55 @@ import java.util.ArrayList;
 public class PingPongTest {
 
   @Test
-  public void isPingPong_countUpToGivenNumber_Array() {
+  public void PingPong_countUpToGivenNumber_Array() {
     PingPong testPingPong = new PingPong();
     ArrayList<Object> expected = new ArrayList<Object>();
     expected.add(1);
     expected.add(2);
     assertEquals(expected, testPingPong.pingPong(2));
+  }
+
+  @Test
+  public void isPingPong_numberDivisibleByThree_Array() {
+    PingPong testPingPong = new PingPong();
+    ArrayList<Object> expected = new ArrayList<Object>();
+    expected.add(1);
+    expected.add(2);
+    expected.add("ping");
+    assertEquals(expected, testPingPong.pingPong(3));
+  }
+
+  @Test
+  public void isPingPong_numberDivisibleByFive_Array() {
+    PingPong testPingPong = new PingPong();
+    ArrayList<Object> expected = new ArrayList<Object>();
+    expected.add(1);
+    expected.add(2);
+    expected.add("ping");
+    expected.add(4);
+    expected.add("pong");
+    assertEquals(expected, testPingPong.pingPong(5));
+  }
+
+  @Test
+  public void isPingPong_numberDivisibleByFifteen_Array() {
+    PingPong testPingPong = new PingPong();
+    ArrayList<Object> expected = new ArrayList<Object>();
+    expected.add(1);
+    expected.add(2);
+    expected.add("ping");
+    expected.add(4);
+    expected.add("pong");
+    expected.add("ping");
+    expected.add(7);
+    expected.add(8);
+    expected.add("ping");
+    expected.add("pong");
+    expected.add(11);
+    expected.add("ping");
+    expected.add(13);
+    expected.add(14);
+    expected.add("PingPong");
+    assertEquals(expected, testPingPong.pingPong(15));
   }
 }
